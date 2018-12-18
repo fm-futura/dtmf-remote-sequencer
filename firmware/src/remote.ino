@@ -5,6 +5,11 @@
 #define DTMF_TIMEOUT   (5*1000)
 #define RF_LOST_TIMEOUT (5*1000)
 #define RF_LOST_RESET_DELAY ((long)60*1000)
+#define KEY_SCAN_INTERVAL (100)
+
+// These are active low.
+static const uint8_t KEY_ON    = A0;
+static const uint8_t KEY_OFF   = A1;
 
 // RF_SENSE is active low.
 static const uint8_t RF_SENSE  = 2;
@@ -38,6 +43,7 @@ volatile enum ACTIONS {
 volatile bool powered = false;
 volatile bool rf_lost = false;
 volatile unsigned long last_dtmf_time = 0;
+volatile unsigned long last_key_scan_time = 0;
 volatile unsigned long rf_lost_time = 0;
 
 
@@ -53,6 +59,9 @@ void setup ()
   pinMode(DTMF_Q2,   INPUT_PULLUP);
   pinMode(DTMF_Q3,   INPUT_PULLUP);
   pinMode(RF_SENSE,  INPUT_PULLUP);
+
+  pinMode(KEY_ON,    INPUT_PULLUP);
+  pinMode(KEY_OFF,   INPUT_PULLUP);
 
   pinMode(RELAY_0,   OUTPUT);
   pinMode(RELAY_1,   OUTPUT);
@@ -98,6 +107,24 @@ void loop ()
   }
 
   if (state == IDLE) {
+    if ((millis() - last_key_scan_time) > KEY_SCAN_INTERVAL) {
+      last_key_scan_time = millis();
+      if (!digitalRead(KEY_OFF) && powered) {
+        noInterrupts();
+        state = EXECUTE_ACTION;
+        action = OFF;
+        interrupts();
+        return;
+      }
+      if (!digitalRead(KEY_ON) && !(powered)) {
+        noInterrupts();
+        state = EXECUTE_ACTION;
+        action = ON;
+        interrupts();
+        return;
+      }
+    }
+
     rf_lost = digitalRead(RF_SENSE) && powered;
     if (!rf_lost) {
       rf_lost_time = 0;
