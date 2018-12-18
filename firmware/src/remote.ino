@@ -1,7 +1,7 @@
 #include<inttypes.h>
 
 #define SWITCH_DELAY   (1*1000)
-#define POWER_OK_DELAY (10*1000)
+#define POWER_OK_DELAY (30*1000)
 #define DTMF_TIMEOUT   (5*1000)
 #define RF_LOST_TIMEOUT (5*1000)
 #define RF_LOST_RESET_DELAY ((long)60*1000)
