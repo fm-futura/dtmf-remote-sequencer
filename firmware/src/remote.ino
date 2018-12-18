@@ -4,7 +4,7 @@
 #define POWER_OK_DELAY (10*1000)
 #define DTMF_TIMEOUT   (5*1000)
 #define RF_LOST_TIMEOUT (5*1000)
-#define RF_LOST_RESET_DELAY (60*1000)
+#define RF_LOST_RESET_DELAY ((long)60*1000)
 
 // RF_SENSE is active low.
 static const uint8_t RF_SENSE  = 2;
