@@ -3,7 +3,10 @@
 #define SWITCH_DELAY   (1*1000)
 #define POWER_OK_DELAY (10*1000)
 #define DTMF_TIMEOUT   (5*1000)
+#define RF_LOST_TIMEOUT (5*1000)
+#define RF_LOST_RESET_DELAY (60*1000)
 
+// RF_SENSE is active low.
 static const uint8_t RF_SENSE  = 2;
 static const uint8_t DTMF_IRQ  = 3;
 
@@ -33,7 +36,9 @@ volatile enum ACTIONS {
 } action;
 
 volatile bool powered = false;
+volatile bool rf_lost = false;
 volatile unsigned long last_dtmf_time = 0;
+volatile unsigned long rf_lost_time = 0;
 
 
 void process_key (char key);
@@ -55,7 +60,6 @@ void setup ()
   pinMode(RELAY_3,   OUTPUT);
 
   attachInterrupt(digitalPinToInterrupt(DTMF_IRQ), dtmf_irq, RISING);
-  attachInterrupt(digitalPinToInterrupt(RF_SENSE), rf_irq,   RISING);
 
   state = EXECUTE_ACTION;
   set_power_state(ON);
@@ -77,6 +81,9 @@ void loop ()
       case RESET:
         set_power_state(OFF);
         delay(POWER_OK_DELAY);
+        if (rf_lost) {
+          delay(RF_LOST_RESET_DELAY);
+        }
         set_power_state(ON);
         delay(POWER_OK_DELAY);
         state = IDLE;
@@ -87,6 +94,26 @@ void loop ()
   if (state == PARSING) {
     if ((millis() - last_dtmf_time) > DTMF_TIMEOUT) {
       state = IDLE;
+    }
+  }
+
+  if (state == IDLE) {
+    rf_lost = digitalRead(RF_SENSE) && powered;
+    if (!rf_lost) {
+      rf_lost_time = 0;
+    } else {
+
+      if (!rf_lost_time) {
+        rf_lost_time = millis();
+      }
+
+      if ((millis() - rf_lost_time) > RF_LOST_TIMEOUT) {
+        noInterrupts();
+        state = EXECUTE_ACTION;
+        action = RESET;
+        interrupts();
+        return;
+      }
     }
   }
 }
