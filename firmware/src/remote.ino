@@ -33,7 +33,7 @@ volatile enum ACTIONS {
 } action;
 
 volatile bool powered = false;
-volatile unsigned long next_dtmf_timeout = 0;
+volatile unsigned long last_dtmf_time = 0;
 
 
 void process_key (char key);
@@ -85,7 +85,7 @@ void loop ()
   }
 
   if (state == PARSING) {
-    if (millis() > next_dtmf_timeout) {
+    if ((millis() - last_dtmf_time) > DTMF_TIMEOUT) {
       state = IDLE;
     }
   }
@@ -99,7 +99,7 @@ void dtmf_irq ()
               + (digitalRead(DTMF_Q2) << 2)
               + (digitalRead(DTMF_Q3) << 3);
 
-  next_dtmf_timeout = millis() + DTMF_TIMEOUT;
+  last_dtmf_time = millis();
   process_key(DTMF_TO_ASCII[idx]);
 }
 
