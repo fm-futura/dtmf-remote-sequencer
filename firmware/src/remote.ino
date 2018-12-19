@@ -210,6 +210,13 @@ void process_key (char key)
             rf_reset_count = 0;
             action = requested_action;
             state = EXECUTE_ACTION;
+            // Do nothing if the requested power state matches current state
+            if (action != RESET) {
+              bool next_power_state = (action == ON) ? true : false;
+              if (powered == next_power_state) {
+                state = IDLE;
+              }
+            }
             break;
 
           default:
