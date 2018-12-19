@@ -21,6 +21,8 @@ static const uint8_t DTMF_Q1   = 5;
 static const uint8_t DTMF_Q2   = 6;
 static const uint8_t DTMF_Q3   = 7;
 
+static const uint8_t STATE_LED = 8;
+
 static const uint8_t RELAY_0   = 9;
 static const uint8_t RELAY_1   = 10;
 static const uint8_t RELAY_2   = 11;
@@ -65,6 +67,7 @@ void setup ()
   pinMode(KEY_ON,    INPUT_PULLUP);
   pinMode(KEY_OFF,   INPUT_PULLUP);
 
+  pinMode(STATE_LED, OUTPUT);
   pinMode(RELAY_0,   OUTPUT);
   pinMode(RELAY_1,   OUTPUT);
   pinMode(RELAY_2,   OUTPUT);
@@ -80,6 +83,8 @@ void setup ()
 
 void loop ()
 {
+  digitalWrite(STATE_LED, (state == IDLE));
+
   if (state == EXECUTE_ACTION) {
     switch (action) {
       case ON:
