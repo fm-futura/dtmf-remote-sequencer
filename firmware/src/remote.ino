@@ -5,6 +5,7 @@
 #define DTMF_TIMEOUT   (5*1000)
 #define RF_LOST_TIMEOUT (5*1000)
 #define RF_LOST_RESET_DELAY ((long)60*1000)
+#define RF_MAX_AUTO_RESET (3)
 #define KEY_SCAN_INTERVAL (100)
 
 // These are active low.
@@ -45,6 +46,7 @@ volatile bool rf_lost = false;
 volatile unsigned long last_dtmf_time = 0;
 volatile unsigned long last_key_scan_time = 0;
 volatile unsigned long rf_lost_time = 0;
+volatile unsigned long rf_reset_count = 0;
 
 
 void process_key (char key);
@@ -111,6 +113,7 @@ void loop ()
       last_key_scan_time = millis();
       if (!digitalRead(KEY_OFF) && powered) {
         noInterrupts();
+        rf_reset_count = 0;
         state = EXECUTE_ACTION;
         action = OFF;
         interrupts();
@@ -118,6 +121,7 @@ void loop ()
       }
       if (!digitalRead(KEY_ON) && !(powered)) {
         noInterrupts();
+        rf_reset_count = 0;
         state = EXECUTE_ACTION;
         action = ON;
         interrupts();
@@ -136,8 +140,13 @@ void loop ()
 
       if ((millis() - rf_lost_time) > RF_LOST_TIMEOUT) {
         noInterrupts();
+          if (rf_reset_count < RF_MAX_AUTO_RESET) {
+            rf_reset_count += 1;
+            action = RESET;
+          } else {
+            action = OFF;
+          }
         state = EXECUTE_ACTION;
-        action = RESET;
         interrupts();
         return;
       }
@@ -198,6 +207,7 @@ void process_key (char key)
           case ON:
           case OFF:
           case RESET:
+            rf_reset_count = 0;
             action = requested_action;
             state = EXECUTE_ACTION;
             break;
