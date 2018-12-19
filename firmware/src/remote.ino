@@ -157,15 +157,6 @@ void dtmf_irq ()
   process_key(DTMF_TO_ASCII[idx]);
 }
 
-void rf_irq ()
-{
-  if (state != IDLE) {
-    return;
-  }
-  state = EXECUTE_ACTION;
-  action = RESET;
-}
-
 
 void process_key (char key)
 {
