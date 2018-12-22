@@ -1,0 +1,849 @@
+EESchema Schematic File Version 4
+LIBS:remote-sequencer-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title "Relay Board"
+Date "2018-12-22"
+Rev ""
+Comp "Futura Comunicación Popular"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR?
+U 1 1 5C1EB8BD
+P 1800 1550
+AR Path="/5C1EB8BD" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C1EB8BD" Ref="#PWR0204"  Part="1" 
+F 0 "#PWR0204" H 1800 1300 50  0001 C CNN
+F 1 "GND" H 1805 1377 50  0000 C CNN
+F 2 "" H 1800 1550 50  0001 C CNN
+F 3 "" H 1800 1550 50  0001 C CNN
+	1    1800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5C1EB8CB
+P 1800 1300
+AR Path="/5C1EB8CB" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C1EB8CB" Ref="#PWR0201"  Part="1" 
+F 0 "#PWR0201" H 1800 1150 50  0001 C CNN
+F 1 "+12V" H 1815 1473 50  0000 C CNN
+F 2 "" H 1800 1300 50  0001 C CNN
+F 3 "" H 1800 1300 50  0001 C CNN
+	1    1800 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C1EB8D2
+P 1350 1350
+AR Path="/5C1EB8D2" Ref="J?"  Part="1" 
+AR Path="/5C1E9383/5C1EB8D2" Ref="J201"  Part="1" 
+F 0 "J201" H 1270 1567 50  0000 C CNN
+F 1 "PWR_IN" H 1270 1476 50  0000 C CNN
+F 2 "Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm" H 1350 1350 50  0001 C CNN
+F 3 "~" H 1350 1350 50  0001 C CNN
+	1    1350 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J?
+U 1 1 5C1EB915
+P 1350 2300
+AR Path="/5C1EB915" Ref="J?"  Part="1" 
+AR Path="/5C1E9383/5C1EB915" Ref="J202"  Part="1" 
+F 0 "J202" H 1270 2717 50  0000 C CNN
+F 1 "RELAY_IN" H 1270 2626 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 1350 2300 50  0001 C CNN
+F 3 "~" H 1350 2300 50  0001 C CNN
+	1    1350 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C1EB946
+P 1750 2100
+AR Path="/5C1EB946" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C1EB946" Ref="#PWR0207"  Part="1" 
+F 0 "#PWR0207" H 1750 1850 50  0001 C CNN
+F 1 "GND" H 1850 2100 50  0000 C CNN
+F 2 "" H 1750 2100 50  0001 C CNN
+F 3 "" H 1750 2100 50  0001 C CNN
+	1    1750 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2100 1550 2100
+$Comp
+L Diode:1N4007 D?
+U 1 1 5C1EB9BC
+P 5500 3700
+AR Path="/5C1EB9BC" Ref="D?"  Part="1" 
+AR Path="/5C1E9383/5C1EB9BC" Ref="D203"  Part="1" 
+F 0 "D203" V 5450 3600 50  0000 C CNN
+F 1 "1N4148" H 5500 3800 50  0000 C CNN
+F 2 "Diodes_ThroughHole:D_DO-41_SOD81_P10.16mm_Horizontal" H 5500 3525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5500 3700 50  0001 C CNN
+	1    5500 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C1EB9C8
+P 4950 4300
+AR Path="/5C1EB9C8" Ref="R?"  Part="1" 
+AR Path="/5C1E9383/5C1EB9C8" Ref="R203"  Part="1" 
+F 0 "R203" V 4950 4250 50  0000 C CNN
+F 1 "1k" V 4950 4350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4880 4300 50  0001 C CNN
+F 3 "~" H 4950 4300 50  0001 C CNN
+	1    4950 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C1EB9F8
+P 1650 1500
+AR Path="/5C1EB9F8" Ref="#FLG?"  Part="1" 
+AR Path="/5C1E9383/5C1EB9F8" Ref="#FLG0202"  Part="1" 
+F 0 "#FLG0202" H 1650 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 1650 1673 50  0001 C CNN
+F 2 "" H 1650 1500 50  0001 C CNN
+F 3 "~" H 1650 1500 50  0001 C CNN
+	1    1650 1500
+	1    0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C1EBA00
+P 1650 1300
+AR Path="/5C1EBA00" Ref="#FLG?"  Part="1" 
+AR Path="/5C1E9383/5C1EBA00" Ref="#FLG0201"  Part="1" 
+F 0 "#FLG0201" H 1650 1375 50  0001 C CNN
+F 1 "PWR_FLAG" H 1650 1474 50  0001 C CNN
+F 2 "" H 1650 1300 50  0001 C CNN
+F 3 "~" H 1650 1300 50  0001 C CNN
+	1    1650 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1300 1800 1350
+Wire Wire Line
+	1800 1350 1650 1350
+Wire Wire Line
+	1800 1450 1650 1450
+Wire Wire Line
+	1800 1450 1800 1550
+Wire Wire Line
+	1650 1500 1650 1450
+Connection ~ 1650 1450
+Wire Wire Line
+	1650 1450 1550 1450
+Wire Wire Line
+	1650 1300 1650 1350
+Connection ~ 1650 1350
+Wire Wire Line
+	1650 1350 1550 1350
+$Comp
+L Transistor_BJT:BC548 Q203
+U 1 1 5C1F8EA3
+P 5400 4300
+F 0 "Q203" H 5591 4346 50  0000 L CNN
+F 1 "BC548" H 5591 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 4225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5400 4300 50  0001 L CNN
+	1    5400 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4300 5200 4300
+$Comp
+L Relay:FINDER-40.11-2016 K203
+U 1 1 5C1F99EB
+P 6200 3700
+F 0 "K203" H 6630 3700 50  0000 L CNN
+F 1 "RELAY_DPDT" H 6630 3655 50  0001 L CNN
+F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RP-II-1-16A-FormC_RM5mm" H 6150 3300 50  0001 C CNN
+F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 6200 3950 50  0001 C CNN
+	1    6200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0221
+U 1 1 5C1FA2E2
+P 5500 4550
+F 0 "#PWR0221" H 5500 4300 50  0001 C CNN
+F 1 "GND" H 5505 4377 50  0000 C CNN
+F 2 "" H 5500 4550 50  0001 C CNN
+F 3 "" H 5500 4550 50  0001 C CNN
+	1    5500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:NEUT #PWR0217
+U 1 1 5C1FA474
+P 2000 3500
+F 0 "#PWR0217" H 2000 3350 50  0001 C CNN
+F 1 "NEUT" H 2017 3673 50  0000 C CNN
+F 2 "" H 2000 3500 50  0001 C CNN
+F 3 "" H 2000 3500 50  0001 C CNN
+	1    2000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0215
+U 1 1 5C1FA4FC
+P 6300 3350
+F 0 "#PWR0215" H 6300 3200 50  0001 C CNN
+F 1 "LINE" H 6317 3523 50  0000 C CNN
+F 2 "" H 6300 3350 50  0001 C CNN
+F 3 "" H 6300 3350 50  0001 C CNN
+	1    6300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0219
+U 1 1 5C1FA584
+P 6400 4050
+F 0 "#PWR0219" H 6400 3900 50  0001 C CNN
+F 1 "LINE" H 6418 4223 50  0000 C CNN
+F 2 "" H 6400 4050 50  0001 C CNN
+F 3 "" H 6400 4050 50  0001 C CNN
+	1    6400 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6400 4000 6400 4050
+Wire Wire Line
+	6300 3350 6300 3400
+Wire Wire Line
+	5500 4550 5500 4500
+Wire Wire Line
+	5500 3850 5500 4000
+Wire Wire Line
+	6000 4000 5500 4000
+Connection ~ 5500 4000
+Wire Wire Line
+	5500 4000 5500 4100
+Wire Wire Line
+	6000 3400 5500 3400
+Wire Wire Line
+	5500 3400 5500 3550
+$Comp
+L power:+12V #PWR?
+U 1 1 5C1FC514
+P 5500 3300
+AR Path="/5C1FC514" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C1FC514" Ref="#PWR0212"  Part="1" 
+F 0 "#PWR0212" H 5500 3150 50  0001 C CNN
+F 1 "+12V" H 5515 3473 50  0000 C CNN
+F 2 "" H 5500 3300 50  0001 C CNN
+F 3 "" H 5500 3300 50  0001 C CNN
+	1    5500 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3300 5500 3400
+Connection ~ 5500 3400
+Wire Wire Line
+	6500 3400 6750 3400
+Text Label 6750 3400 0    50   ~ 0
+PWR_OUT_3
+Text Label 1950 2200 0    50   ~ 0
+CTRL_1
+Text Label 4750 4300 2    50   ~ 0
+CTRL_3
+Wire Wire Line
+	4750 4300 4800 4300
+Wire Wire Line
+	1950 2200 1550 2200
+Text Label 1950 2300 0    50   ~ 0
+CTRL_2
+Text Label 1950 2400 0    50   ~ 0
+CTRL_3
+Text Label 1950 2500 0    50   ~ 0
+CTRL_4
+Wire Wire Line
+	1950 2500 1550 2500
+Wire Wire Line
+	1550 2400 1950 2400
+Wire Wire Line
+	1950 2300 1550 2300
+$Comp
+L Diode:1N4007 D?
+U 1 1 5C1FF821
+P 5500 1900
+AR Path="/5C1FF821" Ref="D?"  Part="1" 
+AR Path="/5C1E9383/5C1FF821" Ref="D201"  Part="1" 
+F 0 "D201" V 5450 1800 50  0000 C CNN
+F 1 "1N4148" H 5500 2000 50  0000 C CNN
+F 2 "Diodes_ThroughHole:D_DO-41_SOD81_P10.16mm_Horizontal" H 5500 1725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 5500 1900 50  0001 C CNN
+	1    5500 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C1FF827
+P 4950 2500
+AR Path="/5C1FF827" Ref="R?"  Part="1" 
+AR Path="/5C1E9383/5C1FF827" Ref="R201"  Part="1" 
+F 0 "R201" V 4950 2450 50  0000 C CNN
+F 1 "1k" V 4950 2550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 4880 2500 50  0001 C CNN
+F 3 "~" H 4950 2500 50  0001 C CNN
+	1    4950 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q201
+U 1 1 5C1FF82D
+P 5400 2500
+F 0 "Q201" H 5591 2546 50  0000 L CNN
+F 1 "BC548" H 5591 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 2425 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5400 2500 50  0001 L CNN
+	1    5400 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2500 5200 2500
+$Comp
+L Relay:FINDER-40.11-2016 K201
+U 1 1 5C1FF834
+P 6200 1900
+F 0 "K201" H 6630 1900 50  0000 L CNN
+F 1 "RELAY_DPDT" H 6630 1855 50  0001 L CNN
+F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RP-II-1-16A-FormC_RM5mm" H 6150 1500 50  0001 C CNN
+F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 6200 2150 50  0001 C CNN
+	1    6200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0210
+U 1 1 5C1FF83A
+P 5500 2750
+F 0 "#PWR0210" H 5500 2500 50  0001 C CNN
+F 1 "GND" H 5505 2577 50  0000 C CNN
+F 2 "" H 5500 2750 50  0001 C CNN
+F 3 "" H 5500 2750 50  0001 C CNN
+	1    5500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0205
+U 1 1 5C1FF840
+P 6300 1550
+F 0 "#PWR0205" H 6300 1400 50  0001 C CNN
+F 1 "LINE" H 6317 1723 50  0000 C CNN
+F 2 "" H 6300 1550 50  0001 C CNN
+F 3 "" H 6300 1550 50  0001 C CNN
+	1    6300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0208
+U 1 1 5C1FF846
+P 6400 2250
+F 0 "#PWR0208" H 6400 2100 50  0001 C CNN
+F 1 "LINE" H 6418 2423 50  0000 C CNN
+F 2 "" H 6400 2250 50  0001 C CNN
+F 3 "" H 6400 2250 50  0001 C CNN
+	1    6400 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6400 2200 6400 2250
+Wire Wire Line
+	6300 1550 6300 1600
+Wire Wire Line
+	5500 2750 5500 2700
+Wire Wire Line
+	5500 2050 5500 2200
+Wire Wire Line
+	6000 2200 5500 2200
+Connection ~ 5500 2200
+Wire Wire Line
+	5500 2200 5500 2300
+Wire Wire Line
+	6000 1600 5500 1600
+Wire Wire Line
+	5500 1600 5500 1750
+$Comp
+L power:+12V #PWR?
+U 1 1 5C1FF855
+P 5500 1500
+AR Path="/5C1FF855" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C1FF855" Ref="#PWR0202"  Part="1" 
+F 0 "#PWR0202" H 5500 1350 50  0001 C CNN
+F 1 "+12V" H 5515 1673 50  0000 C CNN
+F 2 "" H 5500 1500 50  0001 C CNN
+F 3 "" H 5500 1500 50  0001 C CNN
+	1    5500 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1500 5500 1600
+Connection ~ 5500 1600
+Wire Wire Line
+	6500 1600 6750 1600
+Text Label 6750 1600 0    50   ~ 0
+PWR_OUT_1
+Text Label 4750 2500 2    50   ~ 0
+CTRL_1
+Wire Wire Line
+	4750 2500 4800 2500
+$Comp
+L Diode:1N4007 D?
+U 1 1 5C200466
+P 8350 3700
+AR Path="/5C200466" Ref="D?"  Part="1" 
+AR Path="/5C1E9383/5C200466" Ref="D204"  Part="1" 
+F 0 "D204" V 8300 3600 50  0000 C CNN
+F 1 "1N4148" H 8350 3800 50  0000 C CNN
+F 2 "Diodes_ThroughHole:D_DO-41_SOD81_P10.16mm_Horizontal" H 8350 3525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8350 3700 50  0001 C CNN
+	1    8350 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C20046C
+P 7800 4300
+AR Path="/5C20046C" Ref="R?"  Part="1" 
+AR Path="/5C1E9383/5C20046C" Ref="R204"  Part="1" 
+F 0 "R204" V 7800 4250 50  0000 C CNN
+F 1 "1k" V 7800 4350 50  0000 C CNN
+F 2 "Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7730 4300 50  0001 C CNN
+F 3 "~" H 7800 4300 50  0001 C CNN
+	1    7800 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q204
+U 1 1 5C200472
+P 8250 4300
+F 0 "Q204" H 8441 4346 50  0000 L CNN
+F 1 "BC548" H 8441 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8450 4225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8250 4300 50  0001 L CNN
+	1    8250 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4300 8050 4300
+$Comp
+L Relay:FINDER-40.11-2016 K204
+U 1 1 5C200479
+P 9050 3700
+F 0 "K204" H 9480 3700 50  0000 L CNN
+F 1 "RELAY_DPDT" H 9480 3655 50  0001 L CNN
+F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RP-II-1-16A-FormC_RM5mm" H 9000 3300 50  0001 C CNN
+F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 9050 3950 50  0001 C CNN
+	1    9050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0222
+U 1 1 5C20047F
+P 8350 4550
+F 0 "#PWR0222" H 8350 4300 50  0001 C CNN
+F 1 "GND" H 8355 4377 50  0000 C CNN
+F 2 "" H 8350 4550 50  0001 C CNN
+F 3 "" H 8350 4550 50  0001 C CNN
+	1    8350 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0216
+U 1 1 5C200485
+P 9150 3350
+F 0 "#PWR0216" H 9150 3200 50  0001 C CNN
+F 1 "LINE" H 9167 3523 50  0000 C CNN
+F 2 "" H 9150 3350 50  0001 C CNN
+F 3 "" H 9150 3350 50  0001 C CNN
+	1    9150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0220
+U 1 1 5C20048B
+P 9250 4050
+F 0 "#PWR0220" H 9250 3900 50  0001 C CNN
+F 1 "LINE" H 9268 4223 50  0000 C CNN
+F 2 "" H 9250 4050 50  0001 C CNN
+F 3 "" H 9250 4050 50  0001 C CNN
+	1    9250 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9250 4000 9250 4050
+Wire Wire Line
+	9150 3350 9150 3400
+Wire Wire Line
+	8350 4550 8350 4500
+Wire Wire Line
+	8350 3850 8350 4000
+Wire Wire Line
+	8850 4000 8350 4000
+Connection ~ 8350 4000
+Wire Wire Line
+	8350 4000 8350 4100
+Wire Wire Line
+	8850 3400 8350 3400
+Wire Wire Line
+	8350 3400 8350 3550
+$Comp
+L power:+12V #PWR?
+U 1 1 5C20049A
+P 8350 3300
+AR Path="/5C20049A" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C20049A" Ref="#PWR0213"  Part="1" 
+F 0 "#PWR0213" H 8350 3150 50  0001 C CNN
+F 1 "+12V" H 8365 3473 50  0000 C CNN
+F 2 "" H 8350 3300 50  0001 C CNN
+F 3 "" H 8350 3300 50  0001 C CNN
+	1    8350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3300 8350 3400
+Connection ~ 8350 3400
+Wire Wire Line
+	9350 3400 9600 3400
+Text Label 9600 3400 0    50   ~ 0
+PWR_OUT_4
+Text Label 7600 4300 2    50   ~ 0
+CTRL_4
+Wire Wire Line
+	7600 4300 7650 4300
+$Comp
+L Diode:1N4007 D?
+U 1 1 5C2004A6
+P 8350 1900
+AR Path="/5C2004A6" Ref="D?"  Part="1" 
+AR Path="/5C1E9383/5C2004A6" Ref="D202"  Part="1" 
+F 0 "D202" V 8300 1800 50  0000 C CNN
+F 1 "1N4148" H 8350 2000 50  0000 C CNN
+F 2 "Diodes_ThroughHole:D_DO-41_SOD81_P10.16mm_Horizontal" H 8350 1725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8350 1900 50  0001 C CNN
+	1    8350 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C2004AC
+P 7800 2500
+AR Path="/5C2004AC" Ref="R?"  Part="1" 
+AR Path="/5C1E9383/5C2004AC" Ref="R202"  Part="1" 
+F 0 "R202" V 7800 2450 50  0000 C CNN
+F 1 "1k" V 7800 2550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal" V 7730 2500 50  0001 C CNN
+F 3 "~" H 7800 2500 50  0001 C CNN
+	1    7800 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC548 Q202
+U 1 1 5C2004B2
+P 8250 2500
+F 0 "Q202" H 8441 2546 50  0000 L CNN
+F 1 "BC548" H 8441 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8450 2425 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8250 2500 50  0001 L CNN
+	1    8250 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2500 8050 2500
+$Comp
+L Relay:FINDER-40.11-2016 K202
+U 1 1 5C2004B9
+P 9050 1900
+F 0 "K202" H 9480 1900 50  0000 L CNN
+F 1 "RELAY_DPDT" H 9480 1855 50  0001 L CNN
+F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RP-II-1-16A-FormC_RM5mm" H 9000 1500 50  0001 C CNN
+F 3 "https://www.fujitsu.com/downloads/MICRO/fcai/relays/ftr-f1.pdf" H 9050 2150 50  0001 C CNN
+	1    9050 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0211
+U 1 1 5C2004BF
+P 8350 2750
+F 0 "#PWR0211" H 8350 2500 50  0001 C CNN
+F 1 "GND" H 8355 2577 50  0000 C CNN
+F 2 "" H 8350 2750 50  0001 C CNN
+F 3 "" H 8350 2750 50  0001 C CNN
+	1    8350 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0206
+U 1 1 5C2004C5
+P 9150 1550
+F 0 "#PWR0206" H 9150 1400 50  0001 C CNN
+F 1 "LINE" H 9167 1723 50  0000 C CNN
+F 2 "" H 9150 1550 50  0001 C CNN
+F 3 "" H 9150 1550 50  0001 C CNN
+	1    9150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0209
+U 1 1 5C2004CB
+P 9250 2250
+F 0 "#PWR0209" H 9250 2100 50  0001 C CNN
+F 1 "LINE" H 9268 2423 50  0000 C CNN
+F 2 "" H 9250 2250 50  0001 C CNN
+F 3 "" H 9250 2250 50  0001 C CNN
+	1    9250 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9250 2200 9250 2250
+Wire Wire Line
+	9150 1550 9150 1600
+Wire Wire Line
+	8350 2750 8350 2700
+Wire Wire Line
+	8350 2050 8350 2200
+Wire Wire Line
+	8850 2200 8350 2200
+Connection ~ 8350 2200
+Wire Wire Line
+	8350 2200 8350 2300
+Wire Wire Line
+	8850 1600 8350 1600
+Wire Wire Line
+	8350 1600 8350 1750
+$Comp
+L power:+12V #PWR?
+U 1 1 5C2004DA
+P 8350 1500
+AR Path="/5C2004DA" Ref="#PWR?"  Part="1" 
+AR Path="/5C1E9383/5C2004DA" Ref="#PWR0203"  Part="1" 
+F 0 "#PWR0203" H 8350 1350 50  0001 C CNN
+F 1 "+12V" H 8365 1673 50  0000 C CNN
+F 2 "" H 8350 1500 50  0001 C CNN
+F 3 "" H 8350 1500 50  0001 C CNN
+	1    8350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 1500 8350 1600
+Connection ~ 8350 1600
+Wire Wire Line
+	9350 1600 9600 1600
+Text Label 9600 1600 0    50   ~ 0
+PWR_OUT_2
+Text Label 7600 2500 2    50   ~ 0
+CTRL_2
+Wire Wire Line
+	7600 2500 7650 2500
+$Comp
+L Connector:Screw_Terminal_01x03 J203
+U 1 1 5C203B24
+P 1350 3500
+F 0 "J203" H 1270 3817 50  0000 C CNN
+F 1 "AC_POWER_IN" V 1500 3500 50  0000 C CNN
+F 2 "Terminal_Blocks:TerminalBlock_bornier-3_P5.08mm" H 1350 3500 50  0001 C CNN
+F 3 "~" H 1350 3500 50  0001 C CNN
+	1    1350 3500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:LINE #PWR0214
+U 1 1 5C2040EB
+P 1750 3350
+F 0 "#PWR0214" H 1750 3200 50  0001 C CNN
+F 1 "LINE" H 1767 3523 50  0000 C CNN
+F 2 "" H 1750 3350 50  0001 C CNN
+F 3 "" H 1750 3350 50  0001 C CNN
+	1    1750 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth_Protective #PWR0218
+U 1 1 5C20420A
+P 1750 3600
+F 0 "#PWR0218" H 2000 3350 50  0001 C CNN
+F 1 "Earth_Protective" H 2200 3450 50  0001 C CNN
+F 2 "" H 1750 3500 50  0001 C CNN
+F 3 "~" H 1750 3500 50  0001 C CNN
+	1    1750 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3500 1550 3500
+Wire Wire Line
+	1750 3350 1750 3400
+Wire Wire Line
+	1750 3400 1550 3400
+Wire Wire Line
+	1750 3600 1550 3600
+$Comp
+L Connector:Screw_Terminal_01x04 J204
+U 1 1 5C208ADC
+P 2550 4350
+F 0 "J204" H 2629 4342 50  0000 L CNN
+F 1 "PWR_OUT" H 2629 4251 50  0000 L CNN
+F 2 "Terminal_Blocks:TerminalBlock_bornier-4_P5.08mm" H 2550 4350 50  0001 C CNN
+F 3 "~" H 2550 4350 50  0001 C CNN
+	1    2550 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J205
+U 1 1 5C208C4A
+P 2550 4900
+F 0 "J205" H 2629 4892 50  0000 L CNN
+F 1 "NEUTRAL_OUT" H 2629 4801 50  0000 L CNN
+F 2 "Terminal_Blocks:TerminalBlock_bornier-4_P5.08mm" H 2550 4900 50  0001 C CNN
+F 3 "~" H 2550 4900 50  0001 C CNN
+	1    2550 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x04 J206
+U 1 1 5C208CA2
+P 2550 5450
+F 0 "J206" H 2629 5442 50  0000 L CNN
+F 1 "EARTH_OUT" H 2629 5351 50  0000 L CNN
+F 2 "Terminal_Blocks:TerminalBlock_bornier-4_P5.08mm" H 2550 5450 50  0001 C CNN
+F 3 "~" H 2550 5450 50  0001 C CNN
+	1    2550 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:NEUT #PWR0223
+U 1 1 5C209192
+P 2050 4950
+F 0 "#PWR0223" H 2050 4800 50  0001 C CNN
+F 1 "NEUT" H 2067 5123 50  0000 C CNN
+F 2 "" H 2050 4950 50  0001 C CNN
+F 3 "" H 2050 4950 50  0001 C CNN
+	1    2050 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4800 2300 4800
+Wire Wire Line
+	2300 4800 2300 4900
+Wire Wire Line
+	2300 5100 2350 5100
+Wire Wire Line
+	2350 4900 2300 4900
+Connection ~ 2300 4900
+Wire Wire Line
+	2300 4900 2300 4950
+Wire Wire Line
+	2350 5000 2300 5000
+Connection ~ 2300 5000
+Wire Wire Line
+	2300 5000 2300 5100
+Wire Wire Line
+	2050 4950 2300 4950
+Connection ~ 2300 4950
+Wire Wire Line
+	2300 4950 2300 5000
+Wire Wire Line
+	2350 5350 2300 5350
+Wire Wire Line
+	2300 5350 2300 5450
+Wire Wire Line
+	2300 5650 2350 5650
+Wire Wire Line
+	2350 5550 2300 5550
+Connection ~ 2300 5550
+Wire Wire Line
+	2300 5550 2300 5650
+Wire Wire Line
+	2350 5450 2300 5450
+Connection ~ 2300 5450
+Wire Wire Line
+	2300 5450 2300 5500
+$Comp
+L power:Earth_Protective #PWR0224
+U 1 1 5C2131E5
+P 2050 5500
+F 0 "#PWR0224" H 2300 5250 50  0001 C CNN
+F 1 "Earth_Protective" H 2500 5350 50  0001 C CNN
+F 2 "" H 2050 5400 50  0001 C CNN
+F 3 "~" H 2050 5400 50  0001 C CNN
+	1    2050 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 5500 2300 5500
+Connection ~ 2300 5500
+Wire Wire Line
+	2300 5500 2300 5550
+Text Label 2200 4550 2    50   ~ 0
+PWR_OUT_4
+Text Label 2200 4450 2    50   ~ 0
+PWR_OUT_3
+Text Label 2200 4350 2    50   ~ 0
+PWR_OUT_2
+Text Label 2200 4250 2    50   ~ 0
+PWR_OUT_1
+Wire Wire Line
+	2200 4250 2350 4250
+Wire Wire Line
+	2200 4350 2350 4350
+Wire Wire Line
+	2200 4450 2350 4450
+Wire Wire Line
+	2200 4550 2350 4550
+$Comp
+L Graphic:SYM_Flash_Large #SYM201
+U 1 1 5C21DA89
+P 2250 3450
+F 0 "#SYM201" V 2100 3450 50  0001 C CNN
+F 1 "SYM_Flash_Large" V 2380 3450 50  0001 C CNN
+F 2 "Symbols:Symbol_Highvoltage_Type2_CopperTop_Small" H 2240 3360 50  0001 C CNN
+F 3 "~" H 2650 3350 50  0001 C CNN
+	1    2250 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:SYM_Flash_Large #SYM202
+U 1 1 5C21E05E
+P 3200 4350
+F 0 "#SYM202" V 3050 4350 50  0001 C CNN
+F 1 "SYM_Flash_Large" V 3330 4350 50  0001 C CNN
+F 2 "Symbols:Symbol_Highvoltage_Type2_CopperTop_Small" H 3190 4260 50  0001 C CNN
+F 3 "~" H 3600 4250 50  0001 C CNN
+	1    3200 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:SYM_Flash_Large #SYM203
+U 1 1 5C21E095
+P 3200 4900
+F 0 "#SYM203" V 3050 4900 50  0001 C CNN
+F 1 "SYM_Flash_Large" V 3330 4900 50  0001 C CNN
+F 2 "Symbols:Symbol_Highvoltage_Type2_CopperTop_Small" H 3190 4810 50  0001 C CNN
+F 3 "~" H 3600 4800 50  0001 C CNN
+	1    3200 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:SYM_Flash_Large #SYM204
+U 1 1 5C21E0CC
+P 3200 5450
+F 0 "#SYM204" V 3050 5450 50  0001 C CNN
+F 1 "SYM_Flash_Large" V 3330 5450 50  0001 C CNN
+F 2 "Symbols:Symbol_Highvoltage_Type2_CopperTop_Small" H 3190 5360 50  0001 C CNN
+F 3 "~" H 3600 5350 50  0001 C CNN
+	1    3200 5450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

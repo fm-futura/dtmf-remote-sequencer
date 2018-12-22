@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "Main board"
 Date "2018-12-19"
 Rev ""
@@ -662,4 +662,10 @@ Wire Wire Line
 Wire Wire Line
 	1600 3800 1950 3800
 Connection ~ 1950 3800
+$Sheet
+S 8850 2300 750  800 
+U 5C1E9383
+F0 "RelayBoard" 50
+F1 "relay_board.sch" 50
+$EndSheet
 $EndSCHEMATC
