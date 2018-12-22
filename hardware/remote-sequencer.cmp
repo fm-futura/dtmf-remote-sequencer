@@ -1,0 +1,195 @@
+Cmp-Mod V01 Created by PcbNew   date = mié 19 dic 2018 16:38:07 -03
+
+BeginCmp
+TimeStamp = 5C1AB39E
+Path = /5C1A7EF7
+Reference = C1;
+ValeurCmp = 100n;
+IdModule  = Capacitors_ThroughHole:C_Disc_D4.7mm_W2.5mm_P5.00mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB614
+Path = /5C1AD9E5
+Reference = R5;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB54E
+Path = /5C1AD993
+Reference = R3;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB4D3
+Path = /5C1B4527
+Reference = R6;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB41C
+Path = /5C1CC3FA
+Reference = R1;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB2DB
+Path = /5C1AD666
+Reference = R2;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AAEDF
+Path = /5C1AD9BB
+Reference = R4;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AAE55
+Path = /5C1B4571
+Reference = R7;
+ValeurCmp = 1k;
+IdModule  = Resistors_ThroughHole:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB5CD
+Path = /5C1A7864
+Reference = U1;
+ValeurCmp = LM7805_TO220;
+IdModule  = TO_SOT_Packages_THT:TO-220-3_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB58C
+Path = /5C1A9E84
+Reference = J8;
+ValeurCmp = OFF;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB511
+Path = /5C1B6740
+Reference = D5;
+ValeurCmp = READY;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB496
+Path = /5C1CC48E
+Reference = D2;
+ValeurCmp = RF OK;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB45A
+Path = /5C1A9DEE
+Reference = J7;
+ValeurCmp = ON;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB3D9
+Path = /5C1AAFB0
+Reference = J4;
+ValeurCmp = RELAY_OUT;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB360
+Path = /5C1C8089
+Reference = J2;
+ValeurCmp = RF_SENSE_BOARD;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB31C
+Path = /5C1BC29C
+Reference = J6;
+ValeurCmp = DTMF_MODULE;
+IdModule  = Housings_SIP:SIP9_Housing_BigPads;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB29E
+Path = /5C1B4604
+Reference = D4;
+ValeurCmp = WORKING;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB262
+Path = /5C1C6CA8
+Reference = J5;
+ValeurCmp = RF_SENSE_DISABLE;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB226
+Path = /5C1A8C7A
+Reference = J1;
+ValeurCmp = PWR_IN;
+IdModule  = Terminal_Blocks:TerminalBlock_bornier-2_P5.08mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AB0BE
+Path = /5C1A7E1A
+Reference = C2;
+ValeurCmp = 2200uF;
+IdModule  = Capacitors_ThroughHole:CP_Radial_D8.0mm_P5.00mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AAF94
+Path = /5C1A75CE
+Reference = A1;
+ValeurCmp = Arduino_Nano_v3.x;
+IdModule  = footprints:Arduino_Nano_WithMountingHoles;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AAF24
+Path = /5C1A7771
+Reference = D1;
+ValeurCmp = 1N4007;
+IdModule  = Diodes_ThroughHole:D_DO-41_SOD81_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AAE97
+Path = /5C1C844F
+Reference = D3;
+ValeurCmp = 1N4148;
+IdModule  = Diodes_ThroughHole:D_DO-41_SOD81_P10.16mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 5C1AAE12
+Path = /5C1ABD30
+Reference = J3;
+ValeurCmp = RELAY_LED_OUT;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm;
+EndCmp
+
+EndListe
