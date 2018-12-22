@@ -21,7 +21,7 @@ static const uint8_t DTMF_Q1   = 5;
 static const uint8_t DTMF_Q2   = 6;
 static const uint8_t DTMF_Q3   = 7;
 
-static const uint8_t STATE_LED = 8;
+static const uint8_t STATE_LED = A2;
 
 static const uint8_t RELAY_0   = 9;
 static const uint8_t RELAY_1   = 10;
