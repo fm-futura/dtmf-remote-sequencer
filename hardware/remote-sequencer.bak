@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "Main board"
 Date "2018-12-19"
 Rev ""
@@ -667,5 +667,11 @@ S 8850 2300 750  800
 U 5C1E9383
 F0 "RelayBoard" 50
 F1 "relay_board.sch" 50
+$EndSheet
+$Sheet
+S 8850 3400 1250 1150
+U 5C24E8B1
+F0 "RF Sense Board" 50
+F1 "rf_sense.sch" 50
 $EndSheet
 $EndSCHEMATC

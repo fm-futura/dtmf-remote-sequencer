@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title "Relay Board"
 Date "2018-12-22"
 Rev ""
@@ -157,7 +157,7 @@ U 1 1 5C1F8EA3
 P 5400 4300
 F 0 "Q203" H 5591 4346 50  0000 L CNN
 F 1 "BC548" H 5591 4255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 4225 50  0001 L CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Rugged" H 5600 4225 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5400 4300 50  0001 L CNN
 	1    5400 4300
 	1    0    0    -1  
@@ -308,7 +308,7 @@ U 1 1 5C1FF82D
 P 5400 2500
 F 0 "Q201" H 5591 2546 50  0000 L CNN
 F 1 "BC548" H 5591 2455 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 2425 50  0001 L CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Rugged" H 5600 2425 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5400 2500 50  0001 L CNN
 	1    5400 2500
 	1    0    0    -1  
@@ -432,7 +432,7 @@ U 1 1 5C200472
 P 8250 4300
 F 0 "Q204" H 8441 4346 50  0000 L CNN
 F 1 "BC548" H 8441 4255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8450 4225 50  0001 L CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Rugged" H 8450 4225 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8250 4300 50  0001 L CNN
 	1    8250 4300
 	1    0    0    -1  
@@ -556,7 +556,7 @@ U 1 1 5C2004B2
 P 8250 2500
 F 0 "Q202" H 8441 2546 50  0000 L CNN
 F 1 "BC548" H 8441 2455 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8450 2425 50  0001 L CIN
+F 2 "TO_SOT_Packages_THT:TO-92_Rugged" H 8450 2425 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8250 2500 50  0001 L CNN
 	1    8250 2500
 	1    0    0    -1  
