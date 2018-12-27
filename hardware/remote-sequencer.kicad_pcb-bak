@@ -2964,8 +2964,8 @@
     )
   )
 
-  (gr_text "REMOTE POWER SEQUENCER\nRF SENSE BOARD" (at 109.855 93.345 90) (layer F.SilkS) (tstamp 5C24EBA4)
-    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
+  (gr_text "REMOTE POWER SEQUENCER\nRF SENSE BOARD" (at 109.855 77.47 90) (layer F.SilkS) (tstamp 5C24EBA4)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "RF_IN\nGND" (at 71.12 77.47) (layer F.SilkS) (tstamp 5C24E8D4)
     (effects (font (size 1 1) (thickness 0.25)) (justify left))
