@@ -73,11 +73,10 @@ void setup ()
   pinMode(RELAY_2,   OUTPUT);
   pinMode(RELAY_3,   OUTPUT);
 
-  attachInterrupt(digitalPinToInterrupt(DTMF_IRQ), dtmf_irq, RISING);
-
-  state = EXECUTE_ACTION;
   set_power_state(ON);
+
   state = IDLE;
+  attachInterrupt(digitalPinToInterrupt(DTMF_IRQ), dtmf_irq, RISING);
 }
 
 
