@@ -73,6 +73,8 @@ void setup ()
   pinMode(RELAY_2,   OUTPUT);
   pinMode(RELAY_3,   OUTPUT);
 
+  state = EXECUTE_ACTION;
+  update_state_led();
   set_power_state(ON);
 
   state = IDLE;
@@ -82,7 +84,7 @@ void setup ()
 
 void loop ()
 {
-  digitalWrite(STATE_LED, (state == IDLE));
+  update_state_led();
 
   if (state == EXECUTE_ACTION) {
     switch (action) {
@@ -245,4 +247,9 @@ void set_power_state(ACTIONS action) {
   delay(SWITCH_DELAY);
 
   powered = next_power_state;
+}
+
+
+void update_state_led() {
+  digitalWrite(STATE_LED, (state == IDLE));
 }
